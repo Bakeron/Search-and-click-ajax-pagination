@@ -1,0 +1,108 @@
+#bikes {
+  padding: 20px 0;
+  text-align: center;
+  h1 {
+  	margin-bottom: 15px;
+  	font-size: 35px;
+  }
+  #searchForm {
+  	input {
+	  	width: 200px;
+	    height: 15px;
+	    padding: 3px;
+	  	border-radius: 5px;
+  	}
+  	small {
+  		display: block;
+  	}
+  }
+  .buttons-bikes button {
+    width: 70px;
+    margin: 15px 10px;
+  }
+  .searching-bikes {
+  	text-align: center;
+  	div {
+  		display: none;
+  		transition: .5s transform;
+  		margin: 20px 10px;
+  		&:hover {
+  			transform: scale(.9);
+  		}
+  		&:nth-child(1), 
+  		&:nth-child(2), 
+  		&:nth-child(3) {
+  			display: inline-block;
+  		}
+  		img {
+  			display: block;
+  			width: 300px;
+  			height: 200px;
+  		}
+  		h1 {
+  			font-size: 20px;
+  			margin-top: 5px;
+  		}
+  	}
+  }
+	#pagination {
+		ul {
+			text-align: center;
+			padding-left: 0;
+			li {
+				&#1 {
+					font-weight: 700;
+				}
+				list-style-type: none;
+				display: inline-block;
+				font-size: 20px;
+				margin: 0 5px;
+				border: 1px solid #000;
+		    width: 30px;
+		    height: 25px;
+		    border-radius: 5px;
+		    background-color: #f7f7f7;
+		    transition: .5s opacity;
+				&:hover {
+					cursor: pointer;
+					opacity: .4;
+				}
+			}
+		}
+	}
+}
+
+.bikes { height: 425px; }
+
+@media screen and (max-width: 1200px) {
+	.bikes { height: 275px; }
+}
+
+@media screen and (max-width: 1000px) {
+	.bikes { height: 520px; }
+}
+
+@media screen and (max-width: 768px) {
+	.bikes { height: 770px; }
+}
+
+@media screen and (max-width: 600px) {
+	#bikes .buttons-bikes button {
+		margin: 15px 0;
+    width: 60px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	#bikes {
+		// .buttons-bikes button {
+	 //    width: 100%;
+	 //    margin: 0 0 5px;
+		// }
+		.searching-bikes div img {
+	    // display: block;
+	    width: 220px;
+	    height: 150px;
+		}
+	}
+}
