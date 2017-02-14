@@ -50,9 +50,6 @@
 			text-align: center;
 			padding-left: 0;
 			li {
-				&#1 {
-					font-weight: 700;
-				}
 				list-style-type: none;
 				display: inline-block;
 				font-size: 20px;
@@ -94,15 +91,8 @@
 }
 
 @media screen and (max-width: 400px) {
-	#bikes {
-		// .buttons-bikes button {
-	 //    width: 100%;
-	 //    margin: 0 0 5px;
-		// }
-		.searching-bikes div img {
-	    // display: block;
-	    width: 220px;
-	    height: 150px;
-		}
+	#bikes .searching-bikes div img {
+    width: 220px;
+    height: 150px;
 	}
 }

@@ -1,6 +1,17 @@
 $(document).ready(function() {
+
+	/*
+  	Enable strict mode.
+	*/
+	"use strict";
+
 	var pagination = $('#pagination ul');
 
+	/**
+	 * [show_bikes_ajax Download from the database and print the screen information about the bikes.]
+	 * @param  {Number} value_ajax The value entered by the user.
+	 * @return {void}
+	 */
 	function show_bikes_ajax(value_ajax) {
 		var output = $('.searching-bikes'),
 			split = [], img = [], div = [],
@@ -41,6 +52,9 @@ $(document).ready(function() {
 		})
 	}
 
+	/**
+	 * Calling the function download from the database by clicking or writing.
+	 */
 	var value = $('#searchForm input');
 
 	$('#searchForm button').on('click', function() {
@@ -56,6 +70,11 @@ $(document).ready(function() {
 		show_bikes_ajax($(this).text().toLowerCase());
 	});
 
+	/**
+	 * [pagination_ajax Virtual create pagination.]
+	 * @param  {Number} count Download amount of bikes with a particular brand or all bikes.
+	 * @return {void}
+	 */
 	function pagination_ajax(count) {
 		var prev_pagination = document.createElement('li'),
 				next_pagination = document.createElement('li'),
@@ -84,6 +103,9 @@ $(document).ready(function() {
 		var visible_bicycles = [1,2,3], 
 				next_bicycles = 1, current_page = 1;
 			
+		/**
+		 * Watch reactions display bikes and pagination.
+		 */
 		$('#pagination ul li').on('click', function() {
 			var button_click = $(this).attr('id');
 			
@@ -134,6 +156,9 @@ $(document).ready(function() {
 		});
 	}
 
+	/**
+	 * Removing attribute placeholder for less than 1300px.
+	 */
 	if ($(window).width() < 1300) $('#searchForm input').removeAttr('placeholder');
 
 });
