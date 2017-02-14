@@ -1,1 +1,1 @@
-# Search-and-click-ajax-pagination
+# Search-and-click-ajax-plus-pagination
